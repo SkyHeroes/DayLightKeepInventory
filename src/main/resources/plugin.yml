@@ -1,0 +1,5 @@
+name: DayLightKeepInventory
+version: '${project.version}'
+main: pl.skyheroes.daylightkeepinventory.DayLightKeepInventory
+api-version: 1.18
+authors: [ barpec12 ]
