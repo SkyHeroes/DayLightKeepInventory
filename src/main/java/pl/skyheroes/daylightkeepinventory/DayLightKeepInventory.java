@@ -10,7 +10,10 @@ public final class DayLightKeepInventory extends JavaPlugin {
         saveDefaultConfig();
         int hourStartKeepingInventory = getConfig().getInt("hourStartKeepingInventory");
         int hourStopKeepingInventory = getConfig().getInt("hourStopKeepingInventory");
+        String savedInventoryMessage = getConfig().getString("savedInventoryMessage");
+        String lostInventoryMessage = getConfig().getString("lostInventoryMessage");
         Bukkit.getPluginManager().registerEvents(
-                new PlayerDeath(hourStartKeepingInventory, hourStopKeepingInventory), this);
+                new PlayerDeath(hourStartKeepingInventory, hourStopKeepingInventory,
+                        lostInventoryMessage, savedInventoryMessage), this);
     }
 }

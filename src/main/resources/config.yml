@@ -1,2 +1,4 @@
 hourStartKeepingInventory: 8
 hourStopKeepingInventory: 20
+savedInventoryMessage: 'You died when the sun was shining, so you kept your items'
+lostInventoryMessage: 'You died during night and you lost your items in the darkness'
