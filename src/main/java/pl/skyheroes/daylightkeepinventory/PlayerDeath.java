@@ -27,7 +27,7 @@ public class PlayerDeath implements Listener {
         var world = player.getWorld();
         int hour = (int) (world.getTime() / 1000) + 6;
         if(hour > 24) hour -= 24;
-        if (hour > hourStartKeeping && hour < hourStopKeeping) {
+        if (hour >= hourStartKeeping && hour <= hourStopKeeping) {
             event.setKeepInventory(true);
             event.getDrops().clear();
             player.sendMessage(keptInventoryMessage);
