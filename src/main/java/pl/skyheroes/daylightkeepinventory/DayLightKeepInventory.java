@@ -1,5 +1,6 @@
 package pl.skyheroes.daylightkeepinventory;
 
+import com.google.common.annotations.VisibleForTesting;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,6 +14,7 @@ public final class DayLightKeepInventory extends JavaPlugin {
         super();
     }
 
+    @VisibleForTesting
     private DayLightKeepInventory(JavaPluginLoader loader,
                                   PluginDescriptionFile description,
                                   File dataFolder,
