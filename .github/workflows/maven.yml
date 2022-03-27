@@ -18,6 +18,11 @@ jobs:
         run: mvn test
       - name: Generate test coverage report
         run: mvn jacoco:report
+      - name: Try to upload the coverage report to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          fail_ci_if_error: false
+          verbose: false
       - name: Package plugin .JAR
         run: mvn package
       - name: Upload plugin artifact
