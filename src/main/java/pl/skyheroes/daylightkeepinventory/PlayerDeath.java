@@ -30,7 +30,8 @@ public class PlayerDeath implements Listener {
         var player = event.getEntity();
         var world = player.getWorld();
         final var time = timeConverter.fromTicks(world.getTime());
-        if (time.isAfter(timeStartKeeping) && time.isBefore(timeStopKeeping)) {
+        if ((time.isAfter(timeStartKeeping) || time.equals(timeStartKeeping))
+            && time.isBefore(timeStopKeeping)) {
             event.setKeepInventory(true);
             event.getDrops().clear();
             player.sendMessage(keptInventoryMessage);
